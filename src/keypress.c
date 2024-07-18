@@ -61,7 +61,6 @@ void win32KeyEvent(int key, MMKeyFlags flags)
 		case VK_RCONTROL:
 		case VK_SNAPSHOT: /* Print Screen */
 		case VK_RMENU: /* Right Alt / Alt Gr */
-		case VK_PAUSE: /* Pause / Break */
 		case VK_HOME:
 		case VK_UP:
 		case VK_PRIOR: /* Page up */
