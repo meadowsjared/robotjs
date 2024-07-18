@@ -54,7 +54,7 @@ jobs:
             curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
             apt-get -y install nodejs libxtst-dev libpng++-dev
             npm ci
-            npm run prebuild-$BUILD_GROUP
+            npm run prebuild-$BUILD_GROUP --openssl_fips=''
     - name: Install linux x64 dependencies
       if: ${{ matrix.build-group == 'linux-x64' }}
       run: sudo apt-get install libxtst-dev libpng++-dev
