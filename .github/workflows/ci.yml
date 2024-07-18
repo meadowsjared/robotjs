@@ -37,9 +37,11 @@ jobs:
       BUILD_GROUP: ${{ matrix.build-group }}
     steps:
     - uses: actions/checkout@v3
+    - name: install python's setuptools
+      run: pip install setuptools
     - uses: actions/setup-node@v3
       with:
-        node-version: '16'
+        node-version: '20'
         architecture: ${{ matrix.arch }}
     - name: Prebuildify for linux-arm64
       if: ${{ matrix.build-group == 'linux-arm64' }}
@@ -60,7 +62,7 @@ jobs:
       if: ${{ matrix.build-group != 'linux-arm64' }}
     - name: Prebuildify
       if: ${{ matrix.build-group != 'linux-arm64' }}
-      run: npm run prebuild-$BUILD_GROUP
+      run: npm run prebuild-$BUILD_GROUP --openssl_fips=''
       shell: bash
     - uses: actions/upload-artifact@v3
       with:
