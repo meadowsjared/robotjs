@@ -71,7 +71,7 @@ jobs:
         if-no-files-found: error
   publish:
     name: Publish to npm
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-20.04
     needs: build
     steps:
