@@ -209,7 +209,6 @@ enum _MMKeyCode {
 typedef KeySym MMKeyCode;
 
 #elif defined(IS_WINDOWS)
-#define VK_PAUSE 0x13
 
 enum _MMKeyCode {
 	K_NOT_A_KEY = 9999,
@@ -261,7 +260,7 @@ enum _MMKeyCode {
 	K_CAPSLOCK = VK_CAPITAL,
 	K_SPACE = VK_SPACE,
 	K_PRINTSCREEN = VK_SNAPSHOT,
-	K_PAUSE = VK_PAUSE,
+	K_PAUSE = 0x1a, /* VK_PAUSE is not reliable */
 	K_SCROLLLOCK = VK_SCROLL,
 	K_INSERT = VK_INSERT,
 	K_MENU = VK_APPS,
