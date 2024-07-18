@@ -32,9 +32,9 @@ This is a work in progress so the exported functions could change at any time be
 Install RobotJS using npm:
 
 ```
-npm install @jitsi/robotjs
+npm install @meadowsjared/robotjs
 ```
-It's that easy! npm will download one of the prebuilt [binaries](https://github.com/jitsi/robotjs/releases/latest) for your OS.
+It's that easy! npm will download one of the prebuilt [binaries](https://github.com/meadowsjared/robotjs/releases/latest) for your OS.
 
 You can get npm [here](https://nodejs.org/en/download/) if you don't have it installed.
 
@@ -48,7 +48,7 @@ If you need to build RobotJS, see the [building](#building) section. Instruction
 
 ```JavaScript
 // Move the mouse across the screen as a sine wave.
-var robot = require("@jitsi/robotjs");
+var robot = require("@meadowsjared/robotjs");
 
 // Speed up the mouse.
 robot.setMouseDelay(2);
@@ -69,7 +69,7 @@ for (var x = 0; x < width; x++)
 
 ```JavaScript
 // Type "Hello World" then press enter.
-var robot = require("@jitsi/robotjs");
+var robot = require("@meadowsjared/robotjs");
 
 // Type "Hello World".
 robot.typeString("Hello World");
@@ -82,7 +82,7 @@ robot.keyTap("enter");
 
 ```JavaScript
 // Get pixel color under the mouse.
-var robot = require("@jitsi/robotjs");
+var robot = require("@meadowsjared/robotjs");
 
 // Get mouse position.
 var mouse = robot.getMousePos();
