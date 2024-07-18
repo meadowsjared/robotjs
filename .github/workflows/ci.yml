@@ -64,7 +64,7 @@ jobs:
       if: ${{ matrix.build-group != 'linux-arm64' }}
       run: npm run prebuild-$BUILD_GROUP --openssl_fips=''
       shell: bash
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v3
       with:
         name: prebuilds
         path: prebuilds/
