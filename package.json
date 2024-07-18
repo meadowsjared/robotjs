@@ -1,6 +1,6 @@
 {
-  "name": "@jitsi/robotjs",
-  "version": "0.6.13",
+  "name": "@meadowsjared/robotjs",
+  "version": "0.6.15",
   "description": "Node.js Desktop Automation.",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -49,7 +49,7 @@
   "bugs": {
     "url": "https://github.com/jitsi/robotjs/issues"
   },
-  "homepage": "https://github.com/jitsi/robotjs",
+  "homepage": "https://github.com/meadowsjared/robotjs",
   "dependencies": {
     "node-addon-api": "^4.2.0",
     "node-gyp-build": "^4.3.0"
