@@ -36,10 +36,10 @@ jobs:
     env:
       BUILD_GROUP: ${{ matrix.build-group }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: install python's setuptools
       run: pip install setuptools
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: '20'
         architecture: ${{ matrix.arch }}
@@ -64,7 +64,7 @@ jobs:
       if: ${{ matrix.build-group != 'linux-arm64' }}
       run: npm run prebuild-$BUILD_GROUP --openssl_fips=''
       shell: bash
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: prebuilds
         path: prebuilds/
@@ -75,8 +75,8 @@ jobs:
     runs-on: ubuntu-20.04
     needs: build
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/download-artifact@v3
+    - uses: actions/checkout@v4
+    - uses: actions/download-artifact@v4
       with:
         name: prebuilds
         path: prebuilds
@@ -86,7 +86,7 @@ jobs:
         version-type: 'patch'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: '20'
         registry-url: 'https://registry.npmjs.org'
