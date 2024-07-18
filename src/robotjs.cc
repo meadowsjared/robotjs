@@ -363,6 +363,8 @@ static KeyNames key_names[] =
 	{ "shift",          K_SHIFT },
 	{ "right_shift",    K_RIGHTSHIFT },
 	{ "space",          K_SPACE },
+	{ "pause",          K_PAUSE },
+	{ "scrolllock",     K_SCROLLLOCK },
 	{ "printscreen",    K_PRINTSCREEN },
 	{ "insert",         K_INSERT },
 	{ "menu",           K_MENU },
